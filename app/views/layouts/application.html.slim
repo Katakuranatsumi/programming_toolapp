@@ -11,5 +11,7 @@ html
    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
      .navbar-brand programming_tool
    .container
-    = yield
+     - if flash.notice.present?
+       .alert.alert-success= flash.notice
+     = yield
     
