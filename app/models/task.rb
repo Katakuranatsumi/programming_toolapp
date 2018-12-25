@@ -1,4 +1,12 @@
 class Task < ApplicationRecord
+  def self.ransackable_attributes(auth_object = nil)
+    %w[name created_at]  
+  end      
+    
+  def self.ransackable_addociations(auth_object = nil)
+    []  
+  end      
+    
   validates :name,  presence: true
   validates :name,  length: { maximum: 30}
     
