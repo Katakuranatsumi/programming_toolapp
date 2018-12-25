@@ -1,5 +1,5 @@
-class ApplicationMailer < ActionMailer::Base
-  default from: 'usako7233@gmail.com'      
+class TaskMailer < ApplicationMailer
+ default from: 'usako7233@gmail.com'      
     
   def creation_email(task)
     @task = task
@@ -8,6 +8,4 @@ class ApplicationMailer < ActionMailer::Base
      to: 'koohiiko77@gmail.com'  
     )  
   end
-    
-  layout 'mailer'
 end
